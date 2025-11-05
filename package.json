@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
+    "deploy:ci": "npm run build && npx gh-pages -d dist -r https://github.com/jlt2020520/jlt2020520.git"
   },
   "dependencies": {
     "vue": "^3.5.22"
